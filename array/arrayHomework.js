@@ -87,13 +87,15 @@ const arrayGenerator = (...elements) => elements;
 
 
 // 7. string to number
-const convertToNumber = (strings) => {
-    return strings.map((val) => {
-        return Number(val);
-    })
-}
-console.log(convertToNumber(['1.5','2.3','3','4','5']));
+// const convertToNumber = (strings) => {
+//     return strings.map((val) => Number(val));
+// }
+// console.log(convertToNumber(['1.5','2.3','3','4','5']));
 
+// const convertToNumberToo = (strings) => {
+//     return strings.map(val => val*1);
+// }
+// console.log(convertToNumberToo(['1.5','2.3','3','4','5']));
 
 //8. find min and max
 // const findMinMax = (array) => {
@@ -111,17 +113,25 @@ console.log(convertToNumber(['1.5','2.3','3','4','5']));
 
 
 //9. number split
-// const numberSplit = (num) => {
-//     const remain = num%2;
-//     let first = second = (num-remain)/2;
-//     if(num%2 != 0) second += remain;
-//     return [first,second];
-// }
-// console.log(numberSplit(11));
+const numberSplit = (num) => {
+    let first = second = (num-1)/2;
+    if(num%2 != 0) second += 1;
+    return [first,second];
+}
+
+const numberSplitToo = (num) => {
+    return [
+        Math.floor(num/2),
+        Math.ceil(num/2)
+    ]
+}
+ 
+console.log(numberSplit(-11));
+console.log(numberSplitToo(-11));
 
 
 //10. filter string out of array
-// const array = [1,2,3,0,'string','string'];
+// const array = [1,2,3,'1','string','string'];
 
 // const filterStringOut = (array) => {
 //     const result = array.filter((val) => {
@@ -129,7 +139,18 @@ console.log(convertToNumber(['1.5','2.3','3','4','5']));
 //     })
 //     return result
 // }
+
+// const filterStringOut = (array) => {
+//     return array.filter(val => Number(val));
+// }
+
+// const filterStringOutToo = (array) => {
+//     return array.filter((val) => typeof val === "number")
+// }
+
 // console.log(filterStringOut(array));
+// console.log(filterStringOutToo(array));
+
 
 
 //11 even all the way

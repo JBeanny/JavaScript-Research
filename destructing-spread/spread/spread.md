@@ -47,3 +47,12 @@
             const number = [1,2,3,4,5];
             const [...a] = number;
             console.log(a);
+
+- convert string to array
+
+    - Example:
+
+            const string = "hello world my friend, my guys";
+
+            const [...a] = string;
+            console.log(a);
