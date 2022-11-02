@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullname</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        h1{
+            color:cadetblue;
+        }
+        span{
+            color:rgba(220, 20, 60, 0.511);
+            font-size: 2em;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #first-name, #last-name{
+            padding: 1em;
+            width: 300px;
+            border-radius: 1em;
+            border: none;
+            background-color: rgba(128, 128, 128, 0.132);
+            margin-top: 1em;
+        }
+        button{
+            padding: 1em;
+            width: 300px;
+            border-radius: 1em;
+            border: none;
+            background-color: lightgreen;
+            margin-top: 1em;
+            cursor: pointer;
+        }
+    </style>
+    <script src="fullname.js"></script>
+</head>
+<body>
+    <h1>Your full name: </h1><span id="fullname"></span>
+    <form id="form" onsubmit="getFullName()">
+        <input id="first-name" placeholder="first-name"/>
+        <input id="last-name" placeholder="last-name"/>
+        <button type="submit">Get Full Name</button>
+    </form> 
+</body>
+</html>

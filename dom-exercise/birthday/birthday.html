@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday</title>
+    <style>
+        body{
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #EEEEEE;
+            overflow: hidden;
+        }
+        #bd{
+            height: 30vh;
+            width: 30vw;
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            background-color: rgba(172, 169, 169, 0.132);
+            list-style-type: none;
+            border-radius: 1em;
+            overflow-y: scroll;
+        }
+        li{
+            padding: .2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:coral;
+        }
+        h1{
+            color:cadetblue;
+        }
+        #name, #birthday{
+            padding: 1em;
+            width: 300px;
+            border-radius: 1em;
+            border: none;
+            background-color: rgba(128, 128, 128, 0.132);
+            margin-top: 1em;
+        }
+        button{
+            padding: 1em;
+            width: 300px;
+            border-radius: 1em;
+            border: none;
+            background-color: cadetblue;
+            margin-top: 1em;
+            cursor: pointer;
+            color: #FFFFFF;
+        }
+    </style>
+    <script src="birthday.js"></script>
+</head>
+<body>
+    <h1>How old are you ?</h1>
+    <input id="name" placeholder="Name"/>
+    <input id="birthday" placeholder="Birthday" type="date"/>
+    <button onclick="getAge()">Get Age</button>
+    <ul id="bd"></ul>
+    <button onclick="clearList()">Clear list</button>
+</body>
+</html>

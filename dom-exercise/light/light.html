@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Control</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+    <script src="light.js" defer></script>
+</head>
+<body>
+    <button id="off" onclick="lightControl('off')">Turn Off</button>
+    <img src="https://www.w3schools.com/html/pic_bulboff.gif" id="img"/>
+    <button id="on" onclick="lightControl('on')">Turn On</button>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphere Volume</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        h1{
+            color:cadetblue;
+        }
+        span{
+            color:crimson;
+        }
+        #radius, #volume{
+            padding: 1em;
+            width: 300px;
+            border-radius: 1em;
+            border: none;
+            background-color: rgba(128, 128, 128, 0.132);
+            margin-top: 1em;
+        }
+        #button{
+            padding: 1em;
+            width: 300px;
+            border-radius: 1em;
+            border: none;
+            background-color: rgba(128, 128, 128, 0.132);
+            margin-top: 1em;
+            cursor: pointer;
+        }
+    </style>
+    <script src="sphere.js"></script>
+</head>
+<body>
+    <h1>Input radius value and volume of sphere </h1>
+    <label>Radius</label>
+    <input id="radius" placeholder="Radius"/>
+    <label>Volume of sphere</label>
+    <div id="volume"></div>
+    <button id="button" onclick="getVolume()">Calculate</button>
+</body>
+</html>

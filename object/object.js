@@ -109,22 +109,59 @@
 
 
 // ES6 class
-class Book {
-    constructor(name,category,published){
-        this.name = name;
-        this.category = category;
-        this.published = published;
-    }
-    getName(){
-        console.log(`Book name is : ${this.name}.`)
-    }
-    getCategory(){
-        console.log(`Book price is : ${this.category}.`)
-    }
-}
+// class Book {
+//     constructor(name,category,published){
+//         this.name = name;
+//         this.category = category;
+//         this.published = published;
+//     }
+//     getName(){
+//         console.log(`Book name is : ${this.name}.`)
+//     }
+//     getCategory(){
+//         console.log(`Book price is : ${this.category}.`)
+//     }
+// }
 
-const harryPotter = new Book('Harry Potter','Fantasy',true);
-console.log(harryPotter);
-harryPotter.getName();
-harryPotter.getCategory();
+// const harryPotter = new Book('Harry Potter','Fantasy',true);
+// console.log(harryPotter);
+// harryPotter.getName();
+// harryPotter.getCategory();
+
+
+// Example
+
+const student = {
+    name: "student_name",
+    class: "student_class",
+    roll_number: "student_roll"
+}
+const obj = Object.keys(student);
+// console.log(obj[0],obj[1],obj[2]);
+// console.log(Object.keys(student).join(","))
+console.log(Object.keys(student).toString())
+
+const library = [ 
+    {
+        author: 'Bill Gates',
+        title: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        author: 'Steve Jobs',
+        title: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        author: 'Suzanne Collins',
+        title:  'Mockingjay: The Final Book of The Hunger Games', 
+        readingStatus: false
+    }];
+ 
+library.forEach((book)=>{
+    const { author,title,readingStatus } = book;
+    console.log(`${author}, ${title}, ${readingStatus}`)
+    // console.log(Object.values(book).join(", "))
+})
+
 
